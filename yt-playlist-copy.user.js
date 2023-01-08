@@ -30,11 +30,11 @@
         }
         const minutes = Math.floor(seconds / 60);
         if (minutes < 60) {
-            return `${minutes}:${(seconds % 60).toFixed(2)}`;
+            return `${minutes}:${(seconds % 60).toString().padStart(2, '0')}`;
         }
-        return `${Math.floor(minutes / 60)}:${(minutes % 60).toFixed(2)}:${(
-            seconds % 60
-        ).toFixed(2)}`;
+        return `${Math.floor(minutes / 60)}:${(minutes % 60)
+            .toString()
+            .padStart(2, '0')}:${(seconds % 60).toString().padStart(2, '0')}`;
     };
     const init = async () => {
         const values = await GM.listValues();
