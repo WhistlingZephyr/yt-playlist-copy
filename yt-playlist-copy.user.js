@@ -5,7 +5,7 @@
 // @supportURL   https://github.com/WhistlingZephyr/yt-playlist-copy/issues
 // @updateURL    https://github.com/WhistlingZephyr/yt-playlist-copy/raw/main/yt-playlist-copy.user.js
 // @downloadURL  https://github.com/WhistlingZephyr/yt-playlist-copy/raw/main/yt-playlist-copy.user.js
-// @version      0.1
+// @version      0.1.2
 // @description  A simple UserScript to copy YouTube playlist metadata to clipboard
 // @author       WhistlingZephyr
 // @match        https://www.youtube.com/*
@@ -41,7 +41,7 @@
             format:
                 '[{{title}}]({{url}})\n' +
                 '{{description}}\n\n' +
-                '{{#each videos}}- [{{{title}}}]({{{url}}}) {{{length}}}\n' +
+                '{{#each videos}}{{{index}}}. [{{{length}}}] [{{{title}}}]({{{url}}})\n' +
                 '{{/each}}',
         };
         for (const [key, value] of Object.entries(defaults)) {
@@ -80,6 +80,7 @@
                                     index + 1
                                 }`,
                                 length: formatSeconds(video.lengthSeconds),
+                                index: index + 1,
                             })),
                         })
                     );
