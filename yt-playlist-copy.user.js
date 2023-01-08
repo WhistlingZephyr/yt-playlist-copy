@@ -5,7 +5,7 @@
 // @supportURL   https://github.com/WhistlingZephyr/yt-playlist-copy/issues
 // @updateURL    https://github.com/WhistlingZephyr/yt-playlist-copy/raw/main/yt-playlist-copy.user.js
 // @downloadURL  https://github.com/WhistlingZephyr/yt-playlist-copy/raw/main/yt-playlist-copy.user.js
-// @version      0.1.2
+// @version      0.1.3
 // @description  A simple UserScript to copy YouTube playlist metadata to clipboard
 // @author       WhistlingZephyr
 // @match        https://www.youtube.com/*
