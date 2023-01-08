@@ -90,11 +90,7 @@
 
     GM.registerMenuCommand(
         'Copy playlist metadata to clipboard',
-        async () => {
-            if ((await GM.getValue('conversation')) != '[]') {
-                await copyToClipboard();
-            }
-        },
+        copyToClipboard,
         'c'
     );
 })();
