@@ -43,7 +43,7 @@
             format:
                 '[{{title}}]({{url}})\n' +
                 '{{description}}\n\n' +
-                '{{#each videos}}{{{index}}}. [{{{length}}}] [{{{title}}}]({{{url}}})\n' +
+                '{{#each videos}}- [{{{length}}}] [{{{title}}}]({{{url}}})\n' +
                 '{{/each}}',
         };
         for (const [key, value] of Object.entries(defaults)) {
