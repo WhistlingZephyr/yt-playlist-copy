@@ -5,14 +5,14 @@
 // @supportURL   https://github.com/WhistlingZephyr/yt-playlist-copy/issues
 // @updateURL    https://github.com/WhistlingZephyr/yt-playlist-copy/raw/main/yt-playlist-copy.user.js
 // @downloadURL  https://github.com/WhistlingZephyr/yt-playlist-copy/raw/main/yt-playlist-copy.user.js
-// @version      0.1.4
+// @version      0.1.5
 // @description  A simple UserScript to copy YouTube playlist metadata to clipboard
 // @author       WhistlingZephyr
 // @match        https://www.youtube.com/*
 // @match        https://www.youtube-nocookie.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // @require      https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js#sha256=ZSnrWNaPzGe8v25yP0S6YaMaDLMTDHC+4mHTw0xydEk=
-// @connect      inv.riverside.rocks
+// @connect      invidious.projectsegfau.lt
 // @grant        GM_getValue
 // @grant        GM_listValues
 // @grant        GM_setValue
@@ -61,7 +61,7 @@
         if (playlistID) {
             GM_xmlhttpRequest({
                 method: 'GET',
-                url: `https://inv.riverside.rocks/api/v1/playlists/${playlistID}`,
+                url: `https://invidious.projectsegfau.lt/api/v1/playlists/${playlistID}`,
                 headers: {
                     'Content-Type': 'application/json',
                 },
